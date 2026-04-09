@@ -185,7 +185,7 @@ section  h2::after{
 }
 
 .compétences tbody td {
-    /* ajoute une bordure de 1px en bas de chaque cellule */
+
     border-bottom: 1px solid var(--gris-clair);
 }
 
@@ -225,7 +225,124 @@ footer a {
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
-footern a:hover {
+footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
+}
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-info h2::after {
+    margin: 1rem 0; 
+}
+
+.info-item {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--gris-tres-fonce);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-apps {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.social-apps a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.whatsapp { background-color: #25D366; }
+.telegram { background-color: #0088cc; }
+
+.social-apps a:hover {
+    opacity: 0.8;
+}
+
+
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--violet-doux);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        margin: 3rem auto;
+    }
+    .social-apps {
+        flex-direction: column;
+    }
 }
